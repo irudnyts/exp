@@ -18,3 +18,10 @@ cloudml_train(file = here("scripts/train.R"),
 setwd(here())
 
 job_collect()
+
+sensitivities <- readRDS(
+    file = here("runs/cloudml_2020_06_19_123843011/sensitivities.rds")
+)
+
+mean(sensitivities[6:10])
+

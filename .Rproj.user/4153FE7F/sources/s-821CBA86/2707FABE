@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "655863232",
     "id" : "2707FABE",
-    "lastKnownWriteTime" : 1592569887,
-    "last_content_update" : 1592569887849,
+    "lastKnownWriteTime" : 1592649589,
+    "last_content_update" : 1592649589094,
     "path" : "~/Downloads/exp/scripts/train.R",
     "project_path" : "scripts/train.R",
     "properties" : {
-        "cursorPosition" : "13,42",
-        "scrollLine" : "0"
+        "cursorPosition" : "92,8",
+        "scrollLine" : "81"
     },
     "read_only" : false,
     "read_only_alternatives" : [

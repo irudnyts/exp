@@ -89,7 +89,8 @@ for (fold in folds) {
     valid_generator$batch_size <- valid_generator$n 
     valid_generator$shuffle <- FALSE
     
-    predicted <- model %>% predict_generator(generator = valid_generator, steps = 1)
+    predicted <- model %>% 
+        predict_generator(generator = valid_generator, steps = 1)
     # predicted <- (apply(predicted, MARGIN = 1, which.max) - 1) %>% as.factor()
     predicted <- ifelse(predicted > 0.5, 1, 0) %>% as.numeric()
     observed <- valid_generator$y
