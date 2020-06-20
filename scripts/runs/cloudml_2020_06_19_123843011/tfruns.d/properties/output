@@ -1,0 +1,33 @@
+
+> library(keras)
+
+> library(caret)
+
+> library(cloudml)
+
+> set.seed(1968)
+
+> source("load_data_from_directory.R")
+
+> data <- load_data_from_directory(path = gs_data_dir_local("gs://cv-experiment-280812/data"), 
++     target_size = c(100, 100))
+
+> data$y <- data$y - 1
+
+> n_folds <- 5
+
+> folds <- createFolds(y = factor(data$y), k = n_folds, 
++     list = TRUE, returnTrain = TRUE)
+
+> sensitivities <- numeric(n_folds)
+
+> augmented_generator <- image_data_generator(zoom_range = 0.2, 
++     rescale = 1/255, horizontal_flip = TRUE)
+
+> generator <- image_data_generator(rescale = 1/255)
+
+> for (fold in folds) {
++     train_generator <- flow_images_from_data(x = data$x[fold, 
++         , , ], y = data$y[fold], generator = augmented_gene .... [TRUNCATED] 
+
+> saveRDS(object = sensitivities, file = "sensitivities.rds")
